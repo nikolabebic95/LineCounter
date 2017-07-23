@@ -52,10 +52,14 @@ namespace ProjectUtilities.LineCounter
             {
                 Console.WriteLine("Directory does not exist");
             }
+
+            var rootDir = new DirectoryInfo(options.RootFolder);
             
-            var count = counter.Count(new DirectoryInfo(options.RootFolder));
+            var count = counter.Count(rootDir);
+            var fileCount = counter.CountFiles(rootDir);
 
             Console.WriteLine();
+            Console.WriteLine($"File count is {fileCount}");
             Console.WriteLine($"Line count is {count}");
         }
     }

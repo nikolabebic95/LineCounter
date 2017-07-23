@@ -24,8 +24,26 @@ namespace ProjectUtilities.LineCounter.Counters
             return 
                 // Recursive counting in all subdirectories
                 root.GetDirectories().Sum(Count) + 
-                // Plus Actual counting in all files where the extension matches
+                // Plus actual counting in all files where the extension matches
                 root.GetFiles().Where(file => GetExtensions().Contains(file.Extension)).Sum(CountLines);
+        }
+
+        /// <summary>
+        ///   Count the files in a project
+        /// </summary>
+        /// <param name="root">
+        ///   Root directory of a project
+        /// </param>
+        /// <returns>
+        ///   Number of files in the project
+        /// </returns>
+        public int CountFiles(DirectoryInfo root)
+        {
+            return
+                // Recursive counting in all subdirectories
+                root.GetDirectories().Sum(CountFiles) +
+                // Plus actual counting of all files where the extension matches
+                root.GetFiles().Count(file => GetExtensions().Contains(file.Extension));
         }
 
         /// <summary>
