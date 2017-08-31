@@ -56,6 +56,8 @@
     <Compile Include="Counters\CppCounter.cs" />
     <Compile Include="Counters\CsharpCounter.cs" />
     <Compile Include="Counters\JavaCounter.cs" />
+    <Compile Include="Counters\KdpCounter.cs" />
+    <Compile Include="Counters\MicroRiscCounter.cs" />
     <Compile Include="Counters\PascalCounter.cs" />
     <Compile Include="Counters\TypeScriptCounter.cs" />
     <Compile Include="Options.cs" />

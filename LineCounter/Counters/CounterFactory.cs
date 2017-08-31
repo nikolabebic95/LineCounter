@@ -13,7 +13,9 @@ namespace ProjectUtilities.LineCounter.Counters
             { JavaCounter.Singleton.GetName(), JavaCounter.Singleton },
             { CsharpCounter.Singleton.GetName(), CsharpCounter.Singleton },
             { PascalCounter.Singleton.GetName(), PascalCounter.Singleton },
-            { TypeScriptCounter.Singleton.GetName(), TypeScriptCounter.Singleton }
+            { TypeScriptCounter.Singleton.GetName(), TypeScriptCounter.Singleton },
+            { KdpCounter.Singleton.GetName(), KdpCounter.Singleton },
+            { MicroRiscCounter.Singleton.GetName(), KdpCounter.Singleton }
         };
 
         public static Counter GetCounter(string name)
